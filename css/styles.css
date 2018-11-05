@@ -1,0 +1,380 @@
+/* Define solarized colors */
+:root {
+  --solarized-base03:   #002b36;
+  --solarized-base02:   #073642;
+  --solarized-base01:   #586e75;
+  --solarized-base00:   #657b83;
+  --solarized-base0:    #839496;
+  --solarized-base1:    #93a1a1;
+  --solarized-base2:    #eee8d5;
+  --solarized-base3:    #fdf6e3;
+  --solarized-yellow:   #b58900;
+  --solarized-orange:   #cb4b16;
+  --solarized-red:      #dc322f;
+  --solarized-magenta:  #d33682;
+  --solarized-violet:   #6c71c4;
+  --solarized-blue:     #268bd2;
+  --solarized-cyan:     #2aa198;
+  --solarized-green:    #859900;
+}
+
+/* Genral HTML tag styles */
+
+a {
+  color: var(--solarized-violet);
+}
+
+a:link {
+  color: var(--solarized-violet);
+}
+
+a:visited {
+  color: var(--solarized-violet);
+}
+
+body {
+  background-color: var(--solarized-base03);
+  color: var(--solarized-base0);
+}
+
+input {
+  float: right;
+  width: 65%;
+  background-color: inherit;
+  color: inherit;
+  border: none;
+  border-bottom: 1px solid;
+  text-align: center;
+}
+
+button {
+  font-size: 12px;
+  padding: 6px 12px;
+  text-align: center;
+  text-decoration: none;
+  cursor: pointer;
+  border: 1px solid;
+  border-radius: 8px;
+  background-color: var(--solarized-base02);
+  color: var(--solarized-base1);
+}
+
+button:hover {
+  border: 1px solid var(--solarized-blue);
+}
+
+button:active {
+  color: var(--solarized-base2);
+}
+
+select {
+  padding: 6px;
+  background-color: inherit;
+  color: inherit;
+  border: 1px solid;
+}
+
+select:hover {
+  background-color: var(--solarized-base02);
+  color: var(--solarized-base1);
+  border: 1px solid var(--solarized-blue);
+}
+
+h4 {
+  text-align: center;
+  margin: 0px;
+  padding: 6px;
+  color: var(--solarized-base1);
+}
+
+p {
+  margin: 4px;
+}
+
+/* General component styles */
+
+.stat {
+  color: var(--solarized-cyan);
+}
+
+.controls {
+  display: grid;
+}
+
+.searchbar {
+  margin: 12px 0px;
+}
+
+.searchbar input {
+  width: 100%;
+  color: var(--solarized-yellow);
+}
+
+.searchbar input::placeholder {
+  color: inherit;
+}
+
+.labeled-select {
+  margin: 12px 0px;
+}
+
+
+/* Specific component styles */
+
+.url-config-panel {
+  display: flex;
+}
+
+.url-record-panel {
+  width: 33%;
+  padding: 6px;
+  margin: 6px 12px;
+  border: 1px solid;
+  border-radius: 8px;
+  background-color: var(--solarized-base02);
+  color: var(--solarized-base1);
+}
+
+.url-record-panel.shared h4 {
+  color: var(--solarized-blue);
+}
+
+.url-record-panel.control h4 {
+  color: var(--solarized-green);
+}
+
+.url-record-panel.test h4 {
+  color: var(--solarized-red);
+}
+
+.record-panel {
+  padding: 2px;
+}
+
+.queries-panel {
+  padding: 6px;
+  margin: 12px;
+  border: 1px solid;
+  border-radius: 8px;
+  background-color: var(--solarized-base02);
+  color: var(--solarized-base1);
+}
+
+.queries-panel textarea {
+  display: inherit;
+  box-sizing: border-box;
+  resize: none;
+  border: 1px solid;
+  border-radius: 8px;
+  width: 100%;
+  height: 200px;
+  padding: 8px;
+  background-color: var(--solarized-base03);
+  color: var(--solarozed-base0);
+}
+
+.button-panel {
+  display: flex;
+}
+
+.button-panel button {
+  width: 50%;
+  font-size: 14px;
+  margin: 6px 12px;
+}
+
+.result-list-panel {
+  margin: 12px 12px;
+  padding: 6px;
+  border: 1px solid;
+  border-radius: 8px;
+  background-color: var(--solarized-base02);
+  color: var(--solarized-base1);
+}
+
+.result-list-panel .controls {
+  grid-template-columns: auto 25%;
+}
+
+.result-list {
+  max-height: 200px;
+  overflow: scroll;
+  font-size: 12px;
+  border: 1px solid;
+  border-radius: 8px;
+  background-color: var(--solarized-base03);
+  color: var(--solarized-base0);
+}
+
+.result-list-item {
+  padding: 4px 6px;
+  color: var(--solarized-green);
+  text-overflow: ellipsis;
+  border-top: none;
+  border-left: none;
+  border-right: none;
+  border-bottom: 1px solid var(--solarized-base0);
+}
+
+.result-list-item:last-child {
+  border-bottom: none;
+}
+
+.result-list-item i {
+  float: right;
+}
+
+.result-list-item:hover {
+  background-color: var(--solarized-base2);
+  cursor: pointer;
+}
+
+.result-list-item.active-result {
+  background-color: var(--solarized-base2);
+}
+
+.result-list-item.diff {
+  color: var(--solarized-red);
+}
+
+.fa-check {
+  color: var(--solarized-green);
+}
+
+.fa-exclamation {
+  color: var(--solarized-red);
+}
+
+.relevancy-view {
+  display: flex;
+}
+
+.relevancy-view .product-grid {
+  width: 50%;
+}
+
+.product-grid {
+  border: 1px solid;
+  border-radius: 8px;
+  padding: 6px;
+}
+
+.product-grid .flex-grid {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+
+.product-grid.test {
+  background-color: var(--solarized-base03);
+  color: var(--solarized-base0);
+}
+
+.product-grid.control h4 {
+  color: var(--solarized-green);
+}
+
+.product-grid.test h4 {
+  color: var(--solarized-red);
+}
+
+.product-thumbnail {
+  width: 162px;
+  border: 1px solid;
+  border-radius: 8px;
+  margin: 3px;
+  text-align: center;
+  font-size: 12px;
+}
+
+.product-thumbnail.diff {
+  background-color: red;
+  color: var(--solarized-base2);
+  border: 1px solid var(--solarized-red);
+}
+
+.product-thumbnail img {
+  max-width: 100%;
+  max-height: 100%;
+  display: block;
+}
+
+.facets-view {
+  display: flex;
+}
+
+.facets-panel {
+  padding: 6px;
+  border: 1px solid;
+  border-radius: 8px;
+}
+
+.facets-panel.control {
+  border-radius: 8px 0px 0px 8px;
+  border-right: none;
+}
+
+.facets-panel.control h4 {
+  color: var(--solarized-green);
+}
+
+.facets-panel.test {
+  background-color: var(--solarized-base03);
+  color: var(--solarized-base0);
+  border-radius: 0px 8px 8px 0px;
+}
+
+.facets-panel.test h4 {
+  color: var(--solarized-red);
+}
+
+.facets-view .facets-panel {
+  width: 50%;
+}
+
+.facet {
+  border: 1px solid;
+  border-radius: 8px;
+  font-size: 14pt;
+  text-align: center;
+  list-style-type: none;
+  padding: 25px;
+}
+
+.facet.diff {
+  background-color: var(--solarized-orange);
+  color: var(--solarized-base2);
+}
+
+.facet.position {
+  background-color: var(--solarized-yellow);
+  color: var(--solarized-base2);
+}
+
+.facet.diff.position {
+  background-color: var(--solarized-red);
+  color: var(--solarized-base2);
+}
+
+.facet-option {
+  text-align: left;
+  border-bottom: 1px solid;
+}
+
+.facet-count {
+  float: right;
+}
+
+.side-by-side-views {
+  margin: 12px;
+  padding: 6px;
+  border: 1px solid;
+  border-radius: 8px;
+  background-color: var(--solarized-base02);
+  color: var(--solarized-base1);
+}
+
+.view-select-panel {
+  margin: 12px 0px;
+}
+
